@@ -1,0 +1,5 @@
+{
+  "cSpell.words": ["defmt"],
+  "rust-analyzer.check.targets": "thumbv6m-none-eabi",
+  "rust-analyzer.check.allTargets": false
+}

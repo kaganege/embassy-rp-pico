@@ -1,0 +1,53 @@
+[package]
+name = "embassy-rp-pico"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+critical-section = "1.1.2"
+cyw43 = { version = "0.1.0", features = ["defmt"] }
+cyw43-pio = { version = "0.1.0", features = ["defmt", "overclock"] }
+cortex-m = { version = "0.7.6", features = ["inline-asm"] }
+cortex-m-rt = "0.7.0"
+defmt = "0.3.6"
+defmt-rtt = "0.4.0"
+embassy-embedded-hal = { version = "0.1.0", features = ["defmt"] }
+embassy-executor = { version = "0.5.0", features = [
+  "task-arena-size-32768",
+  "arch-cortex-m",
+  "executor-thread",
+  "executor-interrupt",
+  "defmt",
+  "integrated-timers",
+] }
+embassy-futures = "0.1.1"
+embassy-net = { version = "0.4.0", features = [
+  "defmt",
+  "tcp",
+  "udp",
+  "dhcpv4",
+] }
+embassy-net-wiznet = { version = "0.1.0", features = ["defmt"] }
+embassy-rp = { version = "0.1.0", features = [
+  "defmt",
+  "unstable-pac",
+  "time-driver",
+  "critical-section-impl",
+] }
+embassy-usb = { version = "0.1.0", features = ["defmt"] }
+embedded-io-async = { version = "0.6.1", features = ["defmt-03"] }
+fixed = "1.25.1"
+fixed-macro = "1.2.0"
+futures = { version = "0.3.30", default-features = false, features = [
+  "async-await",
+  "cfg-target-has-atomic",
+  "unstable",
+] }
+panic-probe = { version = "0.3.1", features = ["print-defmt"] }
+portable-atomic = { version = "1.5", features = ["critical-section"] }
+static_cell = "2.0.0"
+
+[profile.release]
+debug = 2
