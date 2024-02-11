@@ -356,9 +356,9 @@ dependencies = [
 
 [[package]]
 name = "either"
-version = "1.9.0"
+version = "1.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a26ae43d7bcc3b814de94796a5e736d4029efb0ee900c12e2d54c993ad1a1e07"
+checksum = "11157ac094ffbdde99aa67b23417ebdd801842852b500e395a45a9c0aac03e4a"
 
 [[package]]
 name = "embassy-embedded-hal"
@@ -524,7 +524,6 @@ version = "0.1.0"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
- "critical-section",
  "cyw43",
  "cyw43-pio",
  "defmt",
@@ -535,14 +534,15 @@ dependencies = [
  "embassy-net",
  "embassy-net-wiznet",
  "embassy-rp",
+ "embassy-time",
  "embassy-usb",
+ "embassy-usb-logger",
  "embedded-io-async",
  "fixed",
  "fixed-macro",
  "futures",
+ "log",
  "panic-probe",
- "portable-atomic",
- "static_cell",
 ]
 
 [[package]]
@@ -626,6 +626,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4fc247028eae04174b6635104a35b1ed336aabef4654f5e87a8f32327d231970"
 dependencies = [
  "defmt",
+]
+
+[[package]]
+name = "embassy-usb-logger"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "80417656bff296da3394ad97fae231569a437d17bbea36af6f14a4a562c3c12c"
+dependencies = [
+ "embassy-futures",
+ "embassy-sync 0.5.0",
+ "embassy-usb",
+ "log",
 ]
 
 [[package]]
@@ -992,9 +1004,9 @@ dependencies = [
 
 [[package]]
 name = "is-terminal"
-version = "0.4.11"
+version = "0.4.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fe8f25ce1159c7740ff0b9b2f5cdf4a8428742ba7c112b9f20f22cd5219c7dab"
+checksum = "f23ff5ef2b80d608d61efee834934d862cd92461afc0560dedf493e4c033738b"
 dependencies = [
  "hermit-abi",
  "libc",
@@ -1265,15 +1277,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "portable-atomic"
-version = "1.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7170ef9988bc169ba16dd36a7fa041e5c4cbeb6a35b76d4c03daded371eae7c0"
-dependencies = [
- "critical-section",
-]
-
-[[package]]
 name = "precomputed-hash"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1522,15 +1525,6 @@ name = "stable_deref_trait"
 version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3"
-
-[[package]]
-name = "static_cell"
-version = "2.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fa6ba4cf83bf80d3eb25f098ea5e790a0a1fcb5e357442259b231e412c2d3ca0"
-dependencies = [
- "portable-atomic",
-]
 
 [[package]]
 name = "string_cache"
