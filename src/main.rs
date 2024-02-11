@@ -34,6 +34,7 @@ async fn main(spawner: executor::Spawner) {
   loop {
     println!("Count: {}", counter);
     counter += 1;
-    Timer::after_ticks(1).await;
+    // I don't know, but it doesn't work if we don't wait.
+    Timer::after(Default::default()).await;
   }
 }
