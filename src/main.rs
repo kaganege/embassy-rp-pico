@@ -6,13 +6,6 @@ use embassy_rp::bind_interrupts;
 use embassy_rp::peripherals::USB;
 use embassy_rp::usb;
 use embassy_time::Timer;
-
-macro_rules! println {
-  ( $( $x:expr ),+ ) => {
-    log::info!($($x),+)
-  };
-}
-
 use {defmt_rtt as _, panic_probe as _};
 
 bind_interrupts!(struct Irqs {
@@ -32,9 +25,8 @@ async fn main(spawner: executor::Spawner) {
 
   let mut counter = 0;
   loop {
-    println!("Count: {}", counter);
+    log::info!("Count: {}", counter);
     counter += 1;
-    // I don't know, but it doesn't work if we don't wait.
     Timer::after(Default::default()).await;
   }
 }
