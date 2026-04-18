@@ -1,5 +1,4 @@
 {
-  "cSpell.words": ["defmt", "Irqs", "Pico", "USBCTRL"],
-  "rust-analyzer.check.targets": "thumbv6m-none-eabi",
-  "rust-analyzer.check.allTargets": false
+    "rust-analyzer.check.targets": "thumbv6m-none-eabi",
+    "rust-analyzer.check.allTargets": false,
 }
