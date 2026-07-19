@@ -29,15 +29,8 @@ embassy-time = { version = "0.5.1", features = ["log"] }
 embassy-usb = { version = "0.6.0", features = ["log"] }
 embassy-usb-logger = "0.6.0"
 embedded-io-async = "0.7.0"
-fixed = "1.31.0"
-fixed-macro = "1.2.0"
-log = "0.4.29"
+log = "0.4"
 panic-halt = "1.0.0"
-# futures = { version = "0.3.32", default-features = false, features = [
-#     "async-await",
-#     "cfg-target-has-atomic",
-#     "unstable",
-# ] }
 
 [profile.release]
 # Enable generation of debug symbols even on release builds
