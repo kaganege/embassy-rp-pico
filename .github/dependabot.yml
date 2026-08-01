@@ -5,6 +5,5 @@ version: 2
 updates:
     - package-ecosystem: "cargo"
       directory: "/"
-      versioning-strategy: "increase"
       schedule:
           interval: "monthly"
