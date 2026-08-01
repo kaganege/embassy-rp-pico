@@ -7,7 +7,7 @@ edition = "2024"
 
 [dependencies]
 cortex-m = { version = "0.7.7", features = ["inline-asm"] }
-cortex-m-rt = "0.7.5"
+cortex-m-rt = "0.7.6"
 cyw43 = { version = "0.7.0", features = ["log"] }
 cyw43-pio = "0.10.0"
 embassy-embedded-hal = "0.6.0"
